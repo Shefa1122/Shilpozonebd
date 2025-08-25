@@ -74,6 +74,8 @@ class ProfilePage extends StatelessWidget {
               trailing: Switch(
                 value: true,
                 onChanged: (val) {},
+                activeColor: Colors.blueAccent,
+                hoverColor: Colors.greenAccent,
               ),
             ),
             const Divider(),
