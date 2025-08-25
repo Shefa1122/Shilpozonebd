@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 import 'app_navigation.dart';
 
-class SignupPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  SignupPage({super.key});
+  LoginPage({super.key});
 
-  void _handleSignup(BuildContext context) {
-    // TODO: Add actual signup logic and validation
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("Apnar Signup Shofol Holo!")),
-    );
-
-    // Navigate to home after successful signup
+  void _handleLogin(BuildContext context) {
+    // TODO: Add actual login logic and validation
+    // For now, just navigate to home
     Navigator.pushReplacementNamed(context, AppNavigation.homeRoute);
   }
 
@@ -26,7 +21,7 @@ class SignupPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // Logo section with white and curve background
+              // Logo and white background with torn edge
               Stack(
                 children: [
                   Container(
@@ -34,20 +29,6 @@ class SignupPage extends StatelessWidget {
                     width: double.infinity,
                     color: Colors.white,
                   ),
-
-                  // 🔙 Back button
-                  Positioned(
-                    top: 10,
-                    left: 10,
-                    child: IconButton(
-                      icon: const Icon(Icons.arrow_back, color: Colors.black),
-                      onPressed: () {
-                        Navigator.pop(context); // Go back to LoginPage
-                      },
-                    ),
-                  ),
-
-                  // Logo + name
                   Positioned(
                     top: 15,
                     left: 0,
@@ -70,8 +51,6 @@ class SignupPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  // Curve image
                   Positioned(
                     bottom: 0,
                     left: 0,
@@ -85,9 +64,9 @@ class SignupPage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Sign Up Title
+              // Login Text
               Text(
-                'Sign Up',
+                'Login',
                 style: TextStyle(
                   color: Colors.orange[800],
                   fontWeight: FontWeight.bold,
@@ -95,7 +74,7 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
               Text(
-                'Create a new account',
+                'Sign in to continue',
                 style: TextStyle(
                   color: Colors.orange[200],
                   fontSize: 14,
@@ -110,27 +89,6 @@ class SignupPage extends StatelessWidget {
                   controller: nameController,
                   decoration: InputDecoration(
                     hintText: 'Name',
-                    prefixIcon: const Icon(Icons.person),
-                    filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-
-              // Email Field
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: TextField(
-                  controller: emailController,
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    prefixIcon: const Icon(Icons.email),
                     filled: true,
                     fillColor: Colors.white,
                     contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
@@ -151,7 +109,6 @@ class SignupPage extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: 'Password',
-                    prefixIcon: const Icon(Icons.lock),
                     filled: true,
                     fillColor: Colors.white,
                     contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
@@ -162,13 +119,13 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 25),
 
-              // Sign Up Button
+              // Login Button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: ElevatedButton(
-                  onPressed: () => _handleSignup(context),
+                  onPressed: () => _handleLogin(context),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFE56B2D),
                     padding: const EdgeInsets.symmetric(vertical: 15),
@@ -177,13 +134,56 @@ class SignupPage extends StatelessWidget {
                     ),
                     minimumSize: const Size(double.infinity, 50),
                   ),
-                  child: const Text(
-                    'Create Account',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                  child: const Text('Log In', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              // Forgot Password
+              TextButton(
+                onPressed: () {
+                  // TODO: Forgot password action
+                },
+                child: Text(
+                  'Forgot Password\nwww.shilpozone.com',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.orange[200],
+                    fontSize: 12,
                   ),
                 ),
               ),
 
+              // Signup Button
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AppNavigation.signupRoute);
+                },
+                child: const Text(
+                  "Don't have an account? Create one",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 13,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30),
+              // Product Screen
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, AppNavigation.splashRoute);
+                },
+                child: const Text(
+                  "Show The products",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 13,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
               const SizedBox(height: 30),
             ],
           ),
