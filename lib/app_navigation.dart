@@ -1,4 +1,4 @@
-import 'package:abarshilpozone/shopping_cart_page.dart';
+import 'package:abarshilpozone/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'login_page.dart';
 import 'signup_page.dart';
@@ -19,7 +19,7 @@ class AppNavigation {
       case homeRoute:
         return MaterialPageRoute(builder: (_) => HomePage());
       case splashRoute:
-        return MaterialPageRoute(builder: (_) => ShoppingCartPage());
+        return MaterialPageRoute(builder: (_) => ProfilePage());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
