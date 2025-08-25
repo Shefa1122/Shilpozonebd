@@ -24,7 +24,7 @@ class ProductDetailPage extends StatelessWidget {
             },
             child: const Text("Add to Cart"),
           ),
-        ],
+        ],//bhungchung
       ),
     );
   }
