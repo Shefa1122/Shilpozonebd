@@ -173,7 +173,7 @@ class LoginPage extends StatelessWidget {
               // Product Screen
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, AppNavigation.homeRoute);
+                  Navigator.pushNamed(context, AppNavigation.ordertrackingRoute);
                 },
                 child: const Text(
                   "Show The products",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app_navigation.dart';
-import 'login_page.dart';
+//import 'login_page.dart';
+import 'splash_screen.dart'; // import the splash screen
 
 void main() => runApp(const Abarshilpozone());
 
@@ -12,7 +13,8 @@ class Abarshilpozone extends StatelessWidget {
     return MaterialApp(
       title: 'ShilpoZone',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Set home directly
+      //home: LoginPage(), // Set home directly
+      initialRoute: AppNavigation.splashRoute, // start from splash screen
       onGenerateRoute: AppNavigation.generateRoute,
     );
   }
