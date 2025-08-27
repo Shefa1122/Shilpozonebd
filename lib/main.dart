@@ -12,7 +12,7 @@ class Abarshilpozone extends StatelessWidget {
     return MaterialApp(
       title: 'ShilpoZone',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(), // Set home directly
+      initialRoute: AppNavigation.loginRoute, // Start with login
       onGenerateRoute: AppNavigation.generateRoute,
     );
   }
