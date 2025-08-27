@@ -33,7 +33,7 @@ class CartPage extends StatelessWidget {
             ProductCard(
               image: "assets/pot.png",
               title: "Clay pot",
-              artisan: "Artisan - Charukotha",
+              artisan: "Artisan - moroccan",
               price: "৳354",
               rating: "4/5",
               quantity: "X1",
@@ -51,7 +51,7 @@ class CartPage extends StatelessWidget {
             ProductCard(
               image: "assets/images/bangles.png",
               title: "Bangles",
-              artisan: "Artisan - Chauddaha",
+              artisan: "Artisan - Charukotha",
               price: "৳430",
               rating: "4/5",
               quantity: "X1",
