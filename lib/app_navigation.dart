@@ -1,3 +1,4 @@
+import 'package:abarshilpozone/cart.dart';
 import 'package:abarshilpozone/order_tracking.dart';
 import 'package:abarshilpozone/product_detail_page.dart';
 import 'package:abarshilpozone/splash_screen.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:abarshilpozone/login_page.dart';
 import 'package:abarshilpozone/signup_page.dart';
 import 'package:abarshilpozone/homepage.dart';
-import 'package:abarshilpozone/shopping_cart_page.dart';
 import 'package:abarshilpozone/bottom_navigation.dart';
 
 class AppNavigation {
@@ -19,32 +19,28 @@ class AppNavigation {
   static const String cartRoute = '/cart';
   static const String productdetailRoute = '/productdetail';
   static const String ordertrackingRoute = '/ordertracking';
+  static const String profileRoute = '/profile';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splashRoute:
-        return MaterialPageRoute(builder: (_) => SplashScreen());
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
       case loginRoute:
         return MaterialPageRoute(builder: (_) => LoginPage());
       case signupRoute:
         return MaterialPageRoute(builder: (_) => SignupPage());
       case homeRoute:
         return MaterialPageRoute(builder: (_) => HomePage());
-      case splashRoute:
-        return MaterialPageRoute(builder: (_) => ShoppingCartPage());
       case bottomNavRoute:
         return MaterialPageRoute(builder: (_) => const BottomNavigation());
       case productRoute:
         return MaterialPageRoute(builder: (_) => const ProductDetailPage());
       case cartRoute:
-        return MaterialPageRoute(builder: (_) => ShoppingCartPage());
+        return MaterialPageRoute(builder: (_) => const CartPage());
       case profileRoute:
         return MaterialPageRoute(builder: (_) => const ProfilePage());
-        return MaterialPageRoute(builder: (_) => ProfilePage());
-        case cartRoute:
-          return MaterialPageRoute(builder: (_) => CartPage());
       case ordertrackingRoute:
-        return MaterialPageRoute(builder: (_) => OrderTrackingPage());
+        return MaterialPageRoute(builder: (_) => const OrderTrackingPage());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

@@ -1,25 +1,9 @@
+import 'package:abarshilpozone/cart.dart';
 import 'package:abarshilpozone/product_detail_page.dart';
 import 'package:abarshilpozone/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:abarshilpozone/homepage.dart';
-import 'package:abarshilpozone/shopping_cart_page.dart';
-
-// Create a simple placeholder for Tracking page
-class TrackingPage extends StatelessWidget {
-  const TrackingPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Order Tracking'),
-      ),
-      body: const Center(
-        child: Text('Tracking feature will be implemented soon'),
-      ),
-    );
-  }
-}
+import 'order_tracking.dart';
 
 class BottomNavigation extends StatefulWidget {
   final int initialIndex;
@@ -36,8 +20,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
   static final List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     const ProductDetailPage(),
-    ShoppingCartPage(),
-    const TrackingPage(), // Added TrackingPage here
+    const CartPage(),
+    const OrderTrackingPage(),
     const ProfilePage(),
   ];
 

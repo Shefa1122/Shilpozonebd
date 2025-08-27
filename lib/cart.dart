@@ -31,7 +31,7 @@ class CartPage extends StatelessWidget {
           children: [
             // Products
             ProductCard(
-              image: "assets/images/clay_pot.png",
+              image: "assets/basket.jpg",
               title: "Clay pot",
               artisan: "Artisan - Moroccan",
               price: "৳354",
@@ -40,7 +40,7 @@ class CartPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ProductCard(
-              image: "assets/images/handbag.png",
+              image: "assets/vase.jpg",
               title: "Hand Bag",
               artisan: "Artisan - Tharora",
               price: "৳450",
@@ -49,7 +49,7 @@ class CartPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ProductCard(
-              image: "assets/images/bangles.png",
+              image: "assets/pot.jpg",
               title: "Bangles",
               artisan: "Artisan - Chauddaha",
               price: "৳430",
