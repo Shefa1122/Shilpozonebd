@@ -15,25 +15,25 @@ class HomePage extends StatelessWidget {
       'title': 'Clay pot',
       'artisan': 'Moroccan',
       'rating': '4.8',
-      'image': 'assets/clay_pot.jpg'
+      'image': 'assets/vase.jpg'
     },
     {
       'title': 'Music Instrument',
       'artisan': 'Banglalina',
       'rating': '4.9',
-      'image': 'assets/music_instrument.jpg'
+      'image': 'assets/pot.jpg'
     },
     {
       'title': 'Bangles',
       'artisan': 'Charukatha',
       'rating': '4.8',
-      'image': 'assets/bangles.jpg'
+      'image': 'assets/basket.jpg'
     },
     {
       'title': 'Hand Bag',
       'artisan': 'Tinada',
       'rating': '4.7',
-      'image': 'assets/handbag.jpg'
+      'image': 'assets/pot.jpg'
     },
   ];
 
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/banner.jpg',
+                  'assets/basket.jpg',
                   height: 220,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -239,7 +239,7 @@ class ProductCard extends StatelessWidget {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
               product['image']!,
-              height: 120,
+              height: 400,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
@@ -255,7 +255,7 @@ class ProductCard extends StatelessWidget {
                 ),
                 Text(
                   "Artisan : ${product['artisan']}",
-                  style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
+                  style: GoogleFonts.poppins(fontSize: 20, color: Colors.grey),
                 ),
                 const SizedBox(height: 4),
                 Row(
