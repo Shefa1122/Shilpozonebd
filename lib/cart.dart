@@ -31,9 +31,9 @@ class CartPage extends StatelessWidget {
           children: [
             // Products
             ProductCard(
-              image: "assets/images/clay_pot.png",
+              image: "assets/pot.png",
               title: "Clay pot",
-              artisan: "Artisan - Moroccan",
+              artisan: "Artisan - Charukotha",
               price: "৳354",
               rating: "4/5",
               quantity: "X1",
