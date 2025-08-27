@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/basket.jpg',
+                  'assets/banner.jpg',
                   height: 220,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
                       Row(
                         children: [
                           const CircleAvatar(
-                            backgroundImage: AssetImage('assets/profile.jpg'),
+                            backgroundImage: AssetImage('assets/profile.png'),
                           ),
                           const SizedBox(width: 10),
                           Text(
