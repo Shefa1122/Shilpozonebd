@@ -1,4 +1,6 @@
+import 'package:abarshilpozone/order_tracking.dart';
 import 'package:abarshilpozone/product_detail_page.dart';
+import 'package:abarshilpozone/splash_screen.dart';
 import 'package:abarshilpozone/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:abarshilpozone/login_page.dart';
@@ -15,11 +17,13 @@ class AppNavigation {
   static const String bottomNavRoute = '/bottomNav';
   static const String productRoute = '/products';
   static const String cartRoute = '/cart';
-  static const String trackingRoute = '/tracking';
-  static const String profileRoute = '/profile';
+  static const String productdetailRoute = '/productdetail';
+  static const String ordertrackingRoute = '/ordertracking';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case splashRoute:
+        return MaterialPageRoute(builder: (_) => SplashScreen());
       case loginRoute:
         return MaterialPageRoute(builder: (_) => LoginPage());
       case signupRoute:
@@ -34,10 +38,13 @@ class AppNavigation {
         return MaterialPageRoute(builder: (_) => const ProductDetailPage());
       case cartRoute:
         return MaterialPageRoute(builder: (_) => ShoppingCartPage());
-      case trackingRoute: // Added this case
-        return MaterialPageRoute(builder: (_) => const TrackingPage());
       case profileRoute:
         return MaterialPageRoute(builder: (_) => const ProfilePage());
+        return MaterialPageRoute(builder: (_) => ProfilePage());
+        case cartRoute:
+          return MaterialPageRoute(builder: (_) => CartPage());
+      case ordertrackingRoute:
+        return MaterialPageRoute(builder: (_) => OrderTrackingPage());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
