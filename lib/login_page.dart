@@ -11,6 +11,7 @@ class LoginPage extends StatelessWidget {
     // TODO: Add actual login logic and validation
     // For now, just navigate to home
     Navigator.pushReplacementNamed(context, AppNavigation.homeRoute);
+    Navigator.of(context).pushReplacementNamed(AppNavigation.bottomNavRoute);
   }
 
   @override
