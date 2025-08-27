@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  'assets/basket.jpg',
+                  'assets/banner.jpg',
                   height: 220,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
                       Row(
                         children: [
                           const CircleAvatar(
-                            backgroundImage: AssetImage('assets/profile.jpg'),
+                            backgroundImage: AssetImage('assets/profile.png'),
                           ),
                           const SizedBox(width: 10),
                           Text(
@@ -239,7 +239,7 @@ class ProductCard extends StatelessWidget {
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
               product['image']!,
-              height: 400,
+              height: 150,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
@@ -251,11 +251,11 @@ class ProductCard extends StatelessWidget {
               children: [
                 Text(
                   product['title']!,
-                  style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 14),
+                  style: GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 16),
                 ),
                 Text(
                   "Artisan : ${product['artisan']}",
-                  style: GoogleFonts.poppins(fontSize: 20, color: Colors.grey),
+                  style: GoogleFonts.poppins(fontSize: 12, color: Colors.grey),
                 ),
                 const SizedBox(height: 4),
                 Row(
@@ -263,9 +263,9 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.star, color: Colors.orange, size: 14),
+                        const Icon(Icons.star, color: Colors.orange, size: 16),
                         const SizedBox(width: 4),
-                        Text(product['rating']!, style: GoogleFonts.poppins(fontSize: 12)),
+                        Text(product['rating']!, style: GoogleFonts.poppins(fontSize: 14)),
                       ],
                     ),
                     Container(
