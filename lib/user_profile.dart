@@ -24,10 +24,10 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    const CircleAvatar(
+                    CircleAvatar(
                       radius: 45,
-                      backgroundColor: Colors.grey,
-                      child: Icon(Icons.person, size: 50, color: Colors.white),
+                      backgroundColor: Colors.grey[300],
+                      backgroundImage: const AssetImage('assets/profile.png'), // Your asset image
                     ),
                     Positioned(
                       bottom: 0,
@@ -46,14 +46,13 @@ class ProfilePage extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
                 const Text(
-                  "sakinaegum@gmail.com",
+                  "sakinabegum@gmail.com",
                   style: TextStyle(color: Colors.grey),
                 ),
               ],
             ),
 
             const SizedBox(height: 20),
-
             // General Settings
             Container(
               width: double.infinity,

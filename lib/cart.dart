@@ -31,16 +31,16 @@ class CartPage extends StatelessWidget {
           children: [
             // Products
             ProductCard(
-              image: "assets/pot.png",
+              image: "assets/basket.jpg",
               title: "Clay pot",
-              artisan: "Artisan - moroccan",
+              artisan: "Artisan - Moroccan",
               price: "৳354",
               rating: "4/5",
               quantity: "X1",
             ),
             const SizedBox(height: 10),
             ProductCard(
-              image: "assets/images/handbag.png",
+              image: "assets/vase.jpg",
               title: "Hand Bag",
               artisan: "Artisan - Tharora",
               price: "৳450",
@@ -49,9 +49,9 @@ class CartPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ProductCard(
-              image: "assets/images/bangles.png",
+              image: "assets/pot.jpg",
               title: "Bangles",
-              artisan: "Artisan - Charukotha",
+              artisan: "Artisan - Chauddaha",
               price: "৳430",
               rating: "4/5",
               quantity: "X1",
@@ -212,18 +212,18 @@ class SummaryRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(title,
-              style: TextStyle(
-                  fontWeight: isBold ? FontWeight.bold : FontWeight.normal)),
-          Text(value,
-              style: TextStyle(
-                  fontWeight: isBold ? FontWeight.bold : FontWeight.normal)),
-        ],
-      ),
-    );
-  }
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(title,
+                  style: TextStyle(
+                      fontWeight: isBold ? FontWeight.bold : FontWeight.normal)),
+              Text(value,
+                  style: TextStyle(
+                      fontWeight: isBold ? FontWeight.bold : FontWeight.normal)),
+            ],
+            ),
+        );
+    }
 }
